@@ -698,7 +698,7 @@ html[data-theme="dark"] .theme-toggle .icon--moon {
   }
 
   .nav-links a {
-    color: #ffffff;
+    color: #1b1b1b;
     font-weight: 700;
     white-space: nowrap;
     padding: 6px 6px;
@@ -848,7 +848,24 @@ html[data-theme="dark"] .theme-toggle .icon--moon {
   display: grid;
   grid-template-columns: 1fr 380px;
   gap: 32px;
-  align-items: start;
+  align-items: stretch; /* ensure both columns match height */
+  align-content: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center; /* horizontal center */
+  text-align: center;
+  gap: 10px;
+}
+
+.contact-form {
+  /* allow form to stretch to match contact-info height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .contact-form {
   background: var(--card-bg);
