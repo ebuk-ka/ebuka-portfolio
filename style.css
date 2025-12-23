@@ -698,7 +698,8 @@ html[data-theme="dark"] .theme-toggle .icon--moon {
   }
 
   .nav-links a {
-    color: #1b1b1b;
+    /* theme-aware color for mobile nav links */
+    color: var(--text-color);
     font-weight: 700;
     white-space: nowrap;
     padding: 6px 6px;
@@ -944,6 +945,25 @@ html[data-theme="dark"] .theme-toggle .icon--moon {
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Make the stacked contact containers visually equal on mobile */
+  .contact-form,
+  .contact-info {
+    min-height: 260px;
+    width: 100%;
+  }
+
+  /* Keep form inputs top-aligned on narrow screens for better UX */
+  .contact-form {
+    justify-content: flex-start;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
+
   .footer-inner {
     flex-direction: column;
     text-align: center;
