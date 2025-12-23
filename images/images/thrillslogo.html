@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://thrillsbysunrise.com/#menu -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thrills Restaurant &amp; Bar</title>
+  <link href="./thrillslogo_files/css2" rel="stylesheet">
+  <style>
+    :root {
+      --green: #001a0f;
+      --gold: #d4af37;
+      --background: #fffef9;
+      --text: #333;
+      --light-text: #777;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+    body {
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+      position: relative;
+    }
+    
+    .logo-overlay {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.07;
+      z-index: 0;
+      pointer-events: none;
+      max-width: 60%;
+      max-height: 80vh;
+      filter: grayscale(100%);
+    }
+    
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    header {
+      background: linear-gradient(90deg, var(--green), #003d22);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-bottom: 4px solid var(--gold);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header img {
+      max-width: 120px;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      border: 2px solid var(--gold);
+      transition: transform 0.3s ease;
+    }
+    
+    header img:hover {
+      transform: scale(1.05);
+    }
+    
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    
+    header p {
+      font-style: italic;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    nav {
+      background-color: var(--gold);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: var(--green);
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+    }
+    
+    nav a:hover {
+      color: white;
+      background-color: rgba(0, 26, 15, 0.2);
+    }
+    
+    section {
+      padding: 4rem 10%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .menu-category {
+      margin-bottom: 3rem;
+      background: #fff;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid var(--gold);
+    }
+    
+    .menu-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    .menu-category h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--green);
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    
+    .menu-list {
+      list-style: none;
+    }
+    
+    .menu-list li {
+      padding: 1rem 0;
+      border-bottom: 1px dashed #e0e0e0;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+    .menu-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .menu-list li span {
+      display: block;
+      width: 100%;
+      font-size: 0.95rem;
+      color: var(--light-text);
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+    
+    .price {
+      color: var(--green);
+      font-weight: bold;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+    
+    #contact {
+      text-align: center;
+      background: linear-gradient(rgba(255,254,249,0.9), rgba(255,254,249,0.9)), url('images/contact-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      padding: 3rem;
+    }
+    
+    #contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--green);
+      margin-bottom: 1.5rem;
+    }
+    
+    #contact p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    
+    footer {
+      background-color: var(--green);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.95rem;
+      border-top: 2px solid var(--gold);
+    }
+    
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+    
+    .allergy-notice {
+      background-color: #fff8e1;
+      border-left: 4px solid #ffc107;
+      padding: 1rem 1.5rem;
+      margin: 2rem auto;
+      max-width: 1200px;
+      border-radius: 4px;
+      text-align: center;
+      font-style: italic;
+      color: #5d4037;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      nav a {
+        margin: 0 0.5rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+      
+      section {
+        padding: 2rem 5%;
+      }
+      
+      .menu-list li {
+        flex-direction: column;
+      }
+      
+      .price {
+        margin-left: 0;
+        margin-top: 0.5rem;
+      }
+      
+      .allergy-notice {
+        margin: 2rem 5%;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="./thrillslogo_files/thrills-logo.png" alt="Thrills Logo" class="logo-overlay">
+  <div class="content">
+    <header>
+      <img src="./thrillslogo_files/thrills-logo.jpeg" alt="Thrills Logo">
+      <h1>Thrills Restaurant &amp; Bar</h1>
+      <p>Experience Nigerian elegance on a plate</p>
+    </header>
+
+    <nav>
+      <a href="https://thrillsbysunrise.com/#menu">Menu</a>
+      <a href="https://thrillsbysunrise.com/#fish">Fish</a>
+      <a href="https://thrillsbysunrise.com/#drinks">Drinks</a>
+      <a href="https://thrillsbysunrise.com/#contact">Contact</a>
+    </nav>
+
+    <div class="allergy-notice">
+      Please inform our staff of any food allergies or dietary restrictions when placing your order.
+    </div>
+
+    <section id="menu">
+      <div class="menu-category">
+        <h2>Starters</h2>
+        <ul class="menu-list">
+          <li>Gizdodo <span class="price">₦14,600</span><span>Spicy combination of gizzard and plantains</span></li>
+          <li>Chicken Samosa <span class="price">₦5,300</span><span>Crispy pastry filled with spiced chicken</span></li>
+          <li>Beef Samosa <span class="price">₦7,000</span><span>Flaky pastry with seasoned beef filling</span></li>
+          <li>Veggie Springroll <span class="price">₦4,500</span><span>Vegetable-filled crispy rolls</span></li>
+          <li>Peppered Snail <span class="price">₦18,500</span><span>Spicy sautéed snails with peppers</span></li>
+          <li>Asun and plantain <span class="price">₦17,000</span><span>flavored rosted goat meat and plantain</span></li>
+          <li>Peppered Goat Meat <span class="price">₦11,500</span><span>Tender goat meat in spicy sauce</span></li>
+          <li>Peppered Cow Leg <span class="price">₦9,000</span><span>Cow leg meat in spicy sauce</span></li>
+          <li>Asun <span class="price">₦12,000</span><span>infuse of flavored rosted goat meat </span></li>
+          <li>Peppered Beef <span class="price">₦7,000</span><span>Marinated beef chunks in spicy pepper sauce</span></li>
+          <li>Peppered gizzard <span class="price">₦7,000</span><span>Marinated gizzards in spicy pepper sauce</span></li>
+          <li>Pepper  jumbo prawns <span class="price">₦18,000</span><span>prawns seasoned with bold black pepper and spices</span></li>
+          <li>Chicken and chips <span class="price">₦12,000</span><span>Chicken and Chips</span></li>
+          <li>Peppered chicken wings <span class="price">₦7,000</span><span>Marinated chicken wings in spicy pepper sauce</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Rice Dishes</h2>
+        <ul class="menu-list">
+          <li>Jollof Paella <span class="price">₦18,000</span><span>Nigerian jollof rice meets Spanish paella with seafood, chicken, and smoked paprika</span></li>
+          <li>Pineapple Fried Rice <span class="price">₦15,000</span><span>Fragrant rice with pineapple chunks and vegetables</span></li>
+          <li>Oriental Style Rice <span class="price">₦14,800</span><span>Choice of fried or jollof rice with oriental spices</span></li>
+          <li>Ofada Rice &amp; Ayamase Sauce <span class="price">₦15,200</span><span>Local ofada rice with green pepper sauce</span></li>
+          <li>Steamed Rice &amp; Stew <span class="price">₦4,000</span><span>Plain rice served with Nigerian stew</span></li>
+          <li>Thrill's Jollof Rice + Chicken &amp; Plantain Coleslaw <span class="price">₦14,500</span><span>Signature jollof with sides</span></li>
+          <li>Thrill's Fried Rice + Turkey &amp; Plantain Coleslaw <span class="price">₦17,500</span><span>Signature fried with sides</span></li>
+          <li>Coconut Special <span class="price">₦15,500</span><span>Rice cooked in coconut milk with vegetables</span></li>
+          <li>Seafood Rice <span class="price">₦21,900</span><span>Premium rice dish with assorted seafood</span></li>
+          <li>BBQ COMBO SKEWER <span class="price">₦18,800</span><span>mix of chicken breast, beef strips, and jumbo chicken sausage, all glazed in a rich BBQ sauce,served with your choice of rice</span></li>
+          <li>Egg Fried Rice and Beef in Oyster Sauce <span class="price">₦16,300</span><span>Classic fried rice with beef</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Pasta Dishes</h2>
+        <ul class="menu-list">
+          <li>Asun Native Pasta <span class="price">₦17,100</span><span>Spicy grilled goat with pasta</span></li>
+          <li>Singapore Noodles <span class="price">₦15,000</span><span>Stir-fried rice noodles tossed with curry spices, mixed vegetables with chicken &amp; seafood.</span></li>
+          <li>Seafood Linguine <span class="price">₦13,000</span><span>Choice of tomato or creamy base</span></li>
+          <li>Seafood Pasta <span class="price">₦27,900</span><span>Premium seafood with choice of sauce base</span></li>
+          <li>Stir Fried Pasta <span class="price">₦14,900</span><span>Choice of beef or chicken</span></li>
+          <li>Bolognese <span class="price">₦11,500</span><span>Classic Italian pasta with meat sauce</span></li>
+          <li>THRIL'S SPECIAL NOODLES <span class="price">₦12,500</span><span>Special Noodles </span></li>
+          <li>Alfredo Fettucine Pasta <span class="price">₦15,000</span><span>Creamy Alfredo sauce with fettucine</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Steaks</h2>
+        <ul class="menu-list">
+          <li>T-bone Steak + side <span class="price">₦30,900</span><span>Premium cut with choice of sides - mashed potato,jollof or fries</span></li>
+          <li>Lamb Chops + side <span class="price">₦35,000</span><span>Tender,juicy cuts grilled with Veggies served with choice of sides - mashed potato,jollof or fries</span></li>
+          <li>Grilled Jumbo Prawns + side <span class="price">₦23,700</span><span>Large prawns grilled to perfection with choice of sides - mashed potato,jollof or fries</span></li>
+          <li>Salmon Fish <span class="price">₦36,500</span><span>Fresh tender fillet of grilled salmon fish served with choice of side</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Nigerian Soups + swallow </h2>
+        <ul class="menu-list">
+          <li>Egusi Soup <span class="price">₦13,500</span><span>Melon seed soup with served with poundo,eba or semo</span></li>
+          <li>Ogbono Soup <span class="price">₦12,500</span><span>African mango seed soup with drawy texture, served with poundo,eba or semo</span></li>
+          <li>Edikaikong Soup <span class="price">₦12,500</span><span>Nutritious vegetable soup with pumpkin leaves and water leaves.</span></li>
+          <li>Afang Soup <span class="price">₦15,500</span><span>Traditional soup from Efik people made with wild okazi leaves and water leaves</span></li>
+          <li>Efo Riro <span class="price">₦15,500</span><span>Yoruba vegetable soup made with spinach and assorted meats</span></li>
+          <li>Seafood Okro <span class="price">₦18,500</span><span>Fresh okra soup with seafood including prawns,shrimps,calamari,snail,crab and croaker fish</span></li>
+          <li>Extra Swallow <span class="price">₦3000</span><span>Extra swollow , eba, poundo or semo</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Pepper Soup</h2>
+        <ul class="menu-list">
+          <li>Croaker Fish Pepper Soup <span class="price">₦14,000</span><span>Spicy broth with croaker fish</span></li>
+          <li>Chicken Pepper Soup <span class="price">₦9,500</span><span>Classic Nigerian spicy chicken soup</span></li>
+          <li>Goat Meat Pepper Soup <span class="price">₦14,500</span><span>Hearty goat meat in spicy broth</span></li>
+          <li>Cow Leg Pepper Soup <span class="price">₦9,500</span><span>Classic Nigerian spicy cow leg peppersoup</span></li>
+          <li>Assorted Pepper Soup <span class="price">₦12,000</span><span>Beef assorted meat in spicy broth</span></li>
+          <li>Whole Full Catfish Pepper Soup <span class="price">₦23,500</span><span>Complete catfish in pepper soup</span></li>
+          <li>Turkey Pepper Soup <span class="price">₦12,500</span><span>Spicy turkey meat soup</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Platter</h2>
+        <ul class="menu-list">
+          <li>THRILL'S SPECIAL PLATTER <span class="price">₦56,000</span><span>Peppered gizzard,Peppered goat meat,Peppered beef,Peppered prawns,Fish fingers,Chips,Plantain,Yam,french fries </span></li>
+          <li>SEAFOOD PLATTER <span class="price">₦60,000</span><span>Mixed sefood, prawns , chicken fingers Breaded calamari,Tata sauce,Plantain</span></li>
+          <li>NAIJA SPECIAL PLATTER <span class="price">₦60,000</span><span>turkey,Peppered Snail,Chicken Wings,Peppered Gizzard,Peppered Beef,Yam fries,Plantain,Sweet potato,pepper sauce</span></li>
+          <li>CHICKEN PLATTER  <span class="price">₦38,000</span><span>wings,Chicken laps,Peppered gizzard,yam fries,Plantain fries,Tomato ketchup,Chili sauce </span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Burgers &amp; Shawarma</h2>
+        <ul class="menu-list">
+          <li>Beef Burger + Fries <span class="price">₦11,600</span><span>Juicy beef patty with fries</span></li>
+          <li>Chicken Burger + Fries <span class="price">₦11,600</span><span>Crispy chicken burger with fries</span></li>
+          <li>Chicken Shawarma + Fries <span class="price">₦10,000</span><span>Spiced chicken wrap with fries</span></li>
+          <li>Beef Shawarma + Fries <span class="price">₦11,000</span><span>Seasoned beef wrap with fries</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Sides</h2>
+        <ul class="menu-list">
+          <li>Yam Fries <span class="price">₦3,000</span><span>Crispy fried yam sticks</span></li>
+          <li>French Fries <span class="price">₦3,000</span><span>Classic potato fries</span></li>
+          <li>Mashed Potatoes <span class="price">₦5,000</span><span>Creamy mashed potatoes</span></li>
+          <li>Jollof Rice (side) <span class="price">₦3,000</span><span>Extra 9ja jollof</span></li>
+          <li>Fried rice (side) <span class="price">₦4,000</span><span>Extra Fried Rice</span></li>
+          <li>Mexican Rice (side) <span class="price">₦5,000</span><span>Extra Mexican rice</span></li>
+          <li>Grilled Potatoes <span class="price">₦5,000</span><span>Herbed grilled potato wedges</span></li>
+           <li>PRAWN AVOCADO SALAD  <span class="price">₦12,500</span><span>grilled prawns mixed with salad </span></li>
+          <li>THRILS' LAW <span class="price">₦3,000</span><span>Coleslaw, finely shredded raw cabbage with a salad</span></li>
+          <li>Peppered Chicken Breast <span class="price">₦9,900</span><span>chicken breast</span></li>
+          <li>Peppered Chicken Lap <span class="price">₦9,000</span><span>chicken lap </span></li>
+          <li>Assorted meat <span class="price">₦8,000</span><span>Assorted meat </span></li>
+          <li>Yam and egg sauce <span class="price">₦9,000</span><span>Fried yam and egg sauce</span></li>
+          <li>Tacos and salsa <span class="price">₦20,500</span><span>Tacos and salsa</span></li>
+
+        </ul>
+      </div>
+    </section>
+
+    <section id="fish">
+      <div class="menu-category">
+        <h2>Fish Dishes</h2>
+        <ul class="menu-list">
+          <li>Barbecue Grilled Croaker Fish <span class="price">₦35,000</span><span>Whole croaker fish grilled to perfection with special spices + fries Yam</span></li>
+          <li>Grilled Croaker Fish <span class="price">₦35,000</span><span>Whole croaker fish grilled to perfection with special spices + fries Yam</span></li>
+          <li>Grilled Fish and Plantain <span class="price">₦18,500</span><span>medium whole croaker grilled to your preference with grilled plantain and fresh pumpkin leaf greens sauce,</span></li>
+          <li>Grilled Catfish <span class="price">₦25,500</span><span>Whole catfish seasoned and grilled served with Plantain fries or Yam </span></li>
+          <li>Fish steak with Mexican rice <span class="price">₦22,500</span><span>Rich in herbs flavor pan-grilled croaker fillet steaks 
+ Served with a choice of rice or chips (fries) and seasonal vegetables </span></li>
+          <li>Full large croaker fish pepper soup<span class="price">₦33,000</span><span>Whole croaker fish pepper soup </span></li>
+          <li>Salmon Fish <span class="price">₦36,500</span><span>Fresh tender fillet of grilled salmon fish served with choice of side</span></li>
+          <li> Pepper fish<span class="price">₦12,500</span><span>Fresh fillet with pepper seasoning</span></li>
+          <li> Pan-fries fish with creamy parleys<span class="price">₦19,600</span><span>Boneless croaker fillet pan-seared to a light golden crust
+ Served with silky cube  Irish potatoes infused with fresh parsley herbs, finished with a rich cream sauce base.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="drinks">
+      <div class="menu-category">
+        <h2>Cocktails</h2>
+        <ul class="menu-list">
+          <li>Jasmine <span class="price">₦11,000</span><span>Gin, lemon juice, Campari, orange liqueur</span></li>
+          <li>Margarita <span class="price">₦10,000</span><span>Tequila, triple sec, lime juice</span></li>
+          <li>Blue Margarita <span class="price">₦11,000</span><span>Tequila, triple sec, lime juice</span></li>
+           <li>Strawberry Mojito <span class="price">₦11,000</span><span>Strawberry,White rum, lime, mint, sugar, soda</span></li>
+           <li>Strawberry Margarita <span class="price">₦12,500</span><span>Strawberry,Tequila, juice, triple sec, lime juice</span></li>
+          <li>Daiquiri <span class="price">₦12,000</span><span>Rum, lime juice, sugar</span></li>
+          <li>Long island Ice Tea <span class="price">₦13,000</span><span>Vodka, gin, rum, tequila, triple sec, sour mix, cola</span></li>
+          <li>Cosmopolitan <span class="price">₦11,000</span><span>Vodka, triple sec, cranberry juice, lime</span></li>
+          <li>Dirty Shirley <span class="price">₦11,000</span><span>Vodka, ginger ale, grenadine</span></li>
+          <li>Whiskey Sour <span class="price">₦11,000</span><span>Whiskey, lemon juice, sugar</span></li>
+          <li>Sex on the Beach <span class="price">₦11,000</span><span>Vodka, peach schnapps, cranberry &amp; orange juice</span></li>
+          <li>Pina Colada <span class="price">₦12,000</span><span>Rum, coconut cream, pineapple juice</span></li>
+          <li>Pina Colada Sunrise <span class="price">₦11,000</span><span>A kick of pinacolada mix made with choice of alcohol</span></li>
+          <li>Mojito <span class="price">₦11,000</span><span>White rum, lime, mint, sugar, soda</span></li>
+          <li>jaga ice tea <span class="price">₦11,000</span><span>jagameister,lime, sugar, soda</span></li>
+          <li>Flaming Lamborghini <span class="price">₦13,000</span><span>Khalua, Irish cream, and magic liquor</span></li>
+          <li>⁠Apple toast <span class="price">₦10,000</span><span>coconut rum , gin, pineapple juice and apple syrup… served in a wine glass</span></li>
+          <li>Negroni <span class="price">₦11,000</span><span>Gin, vermouth, Campari</span></li>
+          <li>EVIL SPIRITS <span class="price">₦16,000</span><span>Adult Kick Spirits dark unforgettable flavor</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Signature Cocktails</h2>
+        <ul class="menu-list">
+          <li>Ashes of Roses by Thrills <span class="price">₦15,000</span><span>House special rose-infused cocktail</span></li>
+          <li>Thrills Culture <span class="price">₦12,000</span><span>Bourbon, bitter herbs, orange zest</span></li>
+          <li>Bloody Sucker <span class="price">₦13,000</span><span>Vodka, tomato juice, secret spice mix</span></li>
+          <li>WOW <span class="price">₦12,000</span><span>Whisky, orange liqueur, wine splash</span></li>
+          <li>EVIL SPIRITS <span class="price">₦16,000</span><span>Adult Kick Spirits dark unforgettable flavor</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Mocktails</h2>
+        <ul class="menu-list">
+          <li>Chapman <span class="price">₦7,000</span><span>Bitters, Fanta, Sprite, cucumber, lemon</span></li>
+          <li>Sweet Lime Soda <span class="price">₦7,000</span><span>Lime, soda, sugar syrup</span></li>
+          <li>Virgin diaquiri <span class="price">₦9,000</span><span>sweet Lime, sugar syrup</span></li>
+          <li>Virgin Colada <span class="price">₦8,000</span><span>Coconut cream, pineapple juice</span></li>
+          <li>Virgin Colada sunrise <span class="price">₦9,000</span><span>A smooth mix of pinacolada with a touch of grenadine.</span></li>
+          <li>Thrills Passion Cooler <span class="price">₦8,000</span><span>Passionfruit juice, soda water</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Milkshakes</h2>
+        <ul class="menu-list">
+          <li>Oreo Milkshake <span class="price">₦13,500</span><span>Creamy Oreo cookie shake</span></li>
+          <li>Vanilla Milkshake <span class="price">₦11,000</span><span>Classic vanilla flavor</span></li>
+          <li>Chocolate Milkshake <span class="price">₦11,000</span><span>Rich chocolate flavor</span></li>
+          <li>Strawberry Milkshake <span class="price">₦12,000</span><span>Sweet strawberry flavor</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Smoothies</h2>
+        <ul class="menu-list">
+          <li>Chocoloko <span class="price">₦12,000</span><span>Chocolate and coconut blend</span></li>
+          <li>Fountain of Youth <span class="price">₦15,000</span><span>Antioxidant-rich fruit blend</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Shots</h2>
+        <ul class="menu-list">
+          <li>Wet Pussy <span class="price">₦4,000</span><span>Vodka, peach schnapps, cranberry</span></li>
+          <li>Brain Damage <span class="price">₦4,000</span><span>Baileys, Blue Curacao, grenadine</span></li>
+          <li>69 <span class="price">₦4,000</span><span>Kahlua, Baileys, Grand Marnier</span></li>
+          <li>Creamy Shots <span class="price">₦4,000</span><span>Baileys, cream liqueur, chocolate syrup</span></li>
+          <li>Baileys Comet <span class="price">₦4,000</span><span>Baileys with cinnamon twist</span></li>
+          <li>Coffee Tequila <span class="price">₦4,000</span><span>Tequila with coffee liqueur</span></li>
+          <li>Combo Shots (6 shots) <span class="price">₦24,000</span><span>combo shots of Brain Damage, Wet pussy, 69, creamy shots</span></li>
+          <li>Tequila Shot <span class="price">₦3,000</span><span>Straight tequila shot</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-category">
+        <h2>Soft Drinks</h2>
+        <ul class="menu-list">
+          <li>Juice <span class="price">₦5,000</span><span>Assorted fruit juices</span></li>
+          <li>Water <span class="price">₦800</span><span>Bottled water</span></li>
+          <li>hollandia yoghurt <span class="price">₦6000</span><span>Bottled water</span></li>
+          <li>Sparkling Water <span class="price">₦1,000</span><span>Bottled sparkling water</span></li>
+          <li>Red Wine <span class="price">₦20,000</span><span>sweet or dry red wine</span></li>
+          <li>Isolabella della Croce (Premium white wine) <span class="price">₦65,500</span><span>premium sweet white wine</span></li>
+           <li>Sweet Wine (glass) <span class="price">₦6,000</span><span>sweet or dry red wine</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: hello@thrillsbysunrise.com</p>
+      <p>Phone: +2349164720823</p>
+      <p>Location: 48 1st Avenue Housing Ibara, Abeokuta, Ogun State, Nigeria</p>
+    </section>
+
+    <footer>
+      <p>© 2025 Thrills Restaurant &amp; Bar. All rights reserved.</p>
+      <p>Fine Nigerian Cuisine &amp; Mixology</p>
+    </footer>
+  </div>
+
+</body></html>
