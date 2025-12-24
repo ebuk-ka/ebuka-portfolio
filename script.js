@@ -52,10 +52,10 @@ if(contactForm) {
       return;
     }
 
-    // Open user's email client with mailto: as a simple fallback
+  
     const subject = encodeURIComponent('Contact from portfolio: ' + name);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:okoloebuka756@gmail.com?subject=${subject}&body=${body}`;
 
     if(successEl) {
       successEl.textContent = 'Thanks! Your email client has been opened.';
