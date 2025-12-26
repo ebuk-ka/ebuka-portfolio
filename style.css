@@ -962,8 +962,8 @@ html[data-theme="dark"] .theme-toggle .icon--moon {
 .contact-info {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center; /* horizontal center */
+  justify-content: center; 
+  align-items: center; 
   text-align: center;
   gap: 10px;
 }
@@ -1053,14 +1053,14 @@ html[data-theme="dark"] .theme-toggle .icon--moon {
     grid-template-columns: 1fr;
   }
 
-  /* Make the stacked contact containers visually equal on mobile */
+  
   .contact-form,
   .contact-info {
     min-height: 260px;
     width: 100%;
   }
 
-  /* Keep form inputs top-aligned on narrow screens for better UX */
+  
   .contact-form {
     justify-content: flex-start;
     padding-top: 12px;
@@ -1083,6 +1083,9 @@ html[data-theme="dark"] .theme-toggle .icon--moon {
   display: flex;
   gap: 12px;
   margin-top: 12px;
+}
+.social-link p {
+  font-size: 400
 }
 
 .social-link {

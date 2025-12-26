@@ -31,13 +31,12 @@ function applyTheme(theme) {
     });
 }
 
-// set current year in footer
 const yearEl = document.getElementById('year');
 if(yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-/* Contact form handling */
+
 const contactForm = document.getElementById('contact-form');
 if(contactForm) {
   contactForm.addEventListener('submit', function(e) {
