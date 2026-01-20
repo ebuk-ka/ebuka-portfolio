@@ -548,16 +548,11 @@ html[data-theme="dark"] .theme-toggle .icon--moon {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card-final {
-  grid-column: 1 / -1;
-  justify-self: center; 
-  width: 60%;
-  max-width: 720px;
   margin-top: 36px; 
 }
 
 @media (max-width: 768px) {
   .project-card-final {
-    width: 100%;
     margin-top: 24px;
   }
 }
@@ -1084,9 +1079,7 @@ html[data-theme="dark"] .theme-toggle .icon--moon {
   gap: 12px;
   margin-top: 12px;
 }
-.social-link p {
-  font-size: 400
-}
+
 
 .social-link {
   display: inline-flex;
